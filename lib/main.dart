@@ -2,20 +2,25 @@
 // below it
 import 'package:flutter/material.dart';
 
-import './quotesControl.dart';
+import './text_control.dart';
 
 void main() => runApp(MyApp());
 
-class MyApp extends StatelessWidget{
+class MyApp extends StatelessWidget {
   @override
-  Widget build(BuildContext context){
+  Widget build(BuildContext context) {
     return MaterialApp(
       title: ' flutter_assignment',
       theme: ThemeData(
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: QuotesControl(title: 'flutter_assignment'),
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text('Flutter_assignment'),
+        ),
+        body: TextControl(),
+      ),
     );
   }
 }
